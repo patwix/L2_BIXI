@@ -1,0 +1,36 @@
+/*
+code css pour la barre d'accueil
+*/
+
+.barreAccueil {
+    background-color: #2980B9;
+    padding-left: 135px;
+    padding-right: 20px;
+    overflow: auto;
+    display: block;
+}
+
+.barreAccueil button {
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #2980B9;
+    border: none;
+}
+
+#VeMo {
+    font-size: 150%;
+    padding: 20px;
+}
+
+.globeButton {
+    background-color: #2980B9;
+    padding: 20px 20px 20px 20px;
+    float: right;
+    border: none;
+}
+
+.globeButton:hover {
+    background-color: #01579B;
+}
