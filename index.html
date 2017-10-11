@@ -2,12 +2,15 @@
 <html lang="fr">
 
 <head>
+
+    <script type="text/javascript" src="main.js"></script>
     <!--    pour l'utilisation des icones font awesome-->
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
     <!--Notre fichier style CSS-->
-    <!--      <meta charset="utf-8">    à voir         -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta charset="utf-8">
 
     <!--    INCLUSIONS NÉCESSAIRES -->
 
@@ -17,8 +20,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- (Bootstrap)Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <!-- Nécessaire pour l'acces a l'API Google.... apparement...-->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjonwWBWoE1W6L8sU7KPl7zkRLSaPNC2o"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjonwWBWoE1W6L8sU7KPl7zkRLSaPNC2o&callback=initMap" async defer></script>
+
 
     <!--    FIN DES INCLUSIONS      -->
 
@@ -35,7 +40,7 @@
         <button id="VeMo" href="index.html">Vélo Montréal</a>
         <button id="Accueil" href="index.html">Accueil</a>
         <button class="globeButton">
-            <!-- Enlever le fa-spin, c'est pour le fun-->
+            <!-- Garder le fa-spin, c'est le fun-->
             <i class="fa fa-globe fa-2x fa-spin fa-inverse"></i>
         </button>
     </div>
@@ -43,18 +48,46 @@
     <!--     Code pour les onglets      -->
     <div class="container-fluid">
         <ul class="nav nav-tabs">
-            <li><a id="Carte" class="active" data-toggle="tab"> Carte des stations</a></li>
-            <li><a id="Liste" data-toggle="tab"> Liste des stations</a></li>
+            <li class="active"><a id="Carte" data-toggle="tab" href="#carteStations"> Carte des stations</a></li>
+            <li><a id="Liste" data-toggle="tab" href="#listeStations"> Liste des stations</a></li>
         </ul>
     </div>
 
     <!--    Code pour l'onglet "Carte des stations" -->
-    <div id="CarteStations">
+    <div class="tab-content">
 
-    </div>
+        <div id="carteStations" class="tab-pane fade in active">
 
-    <!--    Code pour l'onglet  "Liste des stations"   -->
-    <div id="ListeStations">
+
+            <div id="rangee" class="row">
+
+                <!-- champ de saisie pour la recherche-->
+                <div class="col-sm-4" id="recherche">
+                    <form>
+                        <input type="text" name="firstname">
+                    </form>
+                </div>
+
+                <!--  tableau d'état des stations-->
+                <div id="tabEtat" class="col-sm-8">
+                </div>
+
+            </div>
+
+            <!-- implementation de l'api google-->
+            <div id="map">
+
+            </div>
+
+
+
+        </div>
+
+
+        <!--    Code pour l'onglet  "Liste des stations "   -->
+        <div class="tab-pane fade" id="listeStations">
+            <p>il faut tester</p>
+        </div>
 
     </div>
 

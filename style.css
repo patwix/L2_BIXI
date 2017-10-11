@@ -21,7 +21,7 @@ code css pour la barre d'accueil
 
 #VeMo {
     font-size: 150%;
-    padding: 20px;
+    padding: 10px;
 }
 
 
@@ -41,6 +41,10 @@ background-color: #00C774 !important;
     padding: 20px;
 }
 
+.nav-tabs a {
+    cursor: pointer;
+}
+
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus {
@@ -50,11 +54,22 @@ background-color: #00C774 !important;
 
 .globeButton {
     background-color: #2980B9;
-    padding: 20px 20px 20px 20px;
+    padding: 10px 10px 10px 10px;
     float: right;
     border: none;
 }
 
 .globeButton:hover {
     background-color: #01579B;
+}
+
+#recherche {
+    border-right: 1px solid blue;
+    height: 180px;
+    margin-left: 20px;
+}
+
+#map {
+    margin: 5px;
+    height: 275px;
 }
