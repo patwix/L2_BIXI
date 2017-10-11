@@ -4,7 +4,7 @@ code css pour la barre d'accueil
 
 .barreAccueil {
     background-color: #2980B9;
-    padding-left: 135px;
+    padding-left: 100px;
     padding-right: 20px;
     overflow: auto;
     display: block;
@@ -22,6 +22,30 @@ code css pour la barre d'accueil
 #VeMo {
     font-size: 150%;
     padding: 20px;
+}
+
+
+/*
+background-color: #00C774 !important;
+*/
+
+#Carte {
+    background-color: #F1F1F1 !important;
+}
+
+#Liste {
+    background-color: #F1F1F1 !important;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    color: #555555;
+    background-color: #00C774;
 }
 
 .globeButton {

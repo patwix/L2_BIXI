@@ -9,15 +9,16 @@
     <!--Notre fichier style CSS-->
     <!--      <meta charset="utf-8">    à voir         -->
 
-    <!--    INCLUSIONS NÉCESSAIRES POUR BOOTSTRAP       -->
+    <!--    INCLUSIONS NÉCESSAIRES -->
 
-    <!-- Latest compiled and minified CSS -->
+    <!-- (Bootstrap) Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
+    <!-- (Bootstrap)Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <!-- Nécessaire pour l'acces a l'API Google.... apparement...-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjonwWBWoE1W6L8sU7KPl7zkRLSaPNC2o"></script>
 
     <!--    FIN DES INCLUSIONS      -->
 
@@ -27,12 +28,34 @@
 
 
 <body>
+
+
+    <!--  Code pour la  barre d'accueil     -->
     <div class="barreAccueil">
         <button id="VeMo" href="index.html">Vélo Montréal</a>
-        <button href="index.html">Accueil</a>
+        <button id="Accueil" href="index.html">Accueil</a>
         <button class="globeButton">
             <!-- Enlever le fa-spin, c'est pour le fun-->
             <i class="fa fa-globe fa-2x fa-spin fa-inverse"></i>
         </button>
     </div>
+
+    <!--     Code pour les onglets      -->
+    <div class="container-fluid">
+        <ul class="nav nav-tabs">
+            <li><a id="Carte" class="active" data-toggle="tab"> Carte des stations</a></li>
+            <li><a id="Liste" data-toggle="tab"> Liste des stations</a></li>
+        </ul>
+    </div>
+
+    <!--    Code pour l'onglet "Carte des stations" -->
+    <div id="CarteStations">
+
+    </div>
+
+    <!--    Code pour l'onglet  "Liste des stations"   -->
+    <div id="ListeStations">
+
+    </div>
+
 </body>
