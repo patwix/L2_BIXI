@@ -24,6 +24,9 @@
     <!-- Nécessaire pour l'acces a l'API Google.... apparement...-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjonwWBWoE1W6L8sU7KPl7zkRLSaPNC2o&callback=initMap" async defer></script>
 
+    <!-- DataTables (pour la liste des stations) -->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
 
     <!--    FIN DES INCLUSIONS      -->
 
@@ -41,7 +44,7 @@
         <button id="Accueil" href="index.html">Accueil</a>
         <button class="globeButton">
             <!-- Garder le fa-spin, c'est le fun-->
-            <i class="fa fa-globe fa-2x fa-spin fa-inverse"></i>
+            <i class="fa fa-globe fa-lg fa-spin fa-inverse"></i>
         </button>
     </div>
 
@@ -86,7 +89,24 @@
 
         <!--    Code pour l'onglet  "Liste des stations "   -->
         <div class="tab-pane fade" id="listeStations">
-            <p>il faut tester</p>
+            <table id="table_id" class="display">
+                <thead>
+                    <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Data 1</td>
+                        <td>Row 2 Data 2</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
     </div>

@@ -24,21 +24,40 @@ code css pour la barre d'accueil
     padding: 10px;
 }
 
+#Accueil {
+    background-color: #01579B;
+    padding: 16px 8px;
+}
+
+.globeButton {
+    background-color: #2980B9;
+    padding: 16px;
+    float: right;
+    border: none;
+}
+
+.globeButton:hover {
+    background-color: #01579B;
+}
 
 /*
 background-color: #00C774 !important;
 */
 
-#Carte {
+/*#Carte {
     background-color: #F1F1F1 !important;
 }
 
 #Liste {
     background-color: #F1F1F1 !important;
-}
+}*/
 
 .container-fluid {
     padding: 20px;
+}
+
+.container-fluid li {
+    background-color: #F1F1F1;
 }
 
 .nav-tabs a {
@@ -48,23 +67,12 @@ background-color: #00C774 !important;
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus {
-    color: #555555;
-    background-color: #00C774;
-}
-
-.globeButton {
-    background-color: #2980B9;
-    padding: 10px 10px 10px 10px;
-    float: right;
-    border: none;
-}
-
-.globeButton:hover {
-    background-color: #01579B;
+    color: #fff !important;
+    background-color: #27AE60 !important;
 }
 
 #recherche {
-    border-right: 1px solid blue;
+    border-right: 1px solid #F1F1F1;
     height: 180px;
     margin-left: 20px;
 }

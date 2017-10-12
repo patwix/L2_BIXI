@@ -1,3 +1,5 @@
+// Initialisation de la carte google maps
+
 var map;
 
 function initMap() {
@@ -6,3 +8,9 @@ function initMap() {
         zoom: 10
     });
 }
+
+// Initialisation du tableau de la liste des stations
+
+$(document).ready( function () {
+    $('#table_id').DataTable();
+} );
