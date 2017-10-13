@@ -11,6 +11,6 @@ function initMap() {
 
 // Initialisation du tableau de la liste des stations
 
-$(document).ready( function () {
-    $('#table_id').DataTable();
+$(document).ready(function () {
+    $("#tableau_liste").DataTable();
 } );

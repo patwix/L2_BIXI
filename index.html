@@ -12,13 +12,11 @@
 
     <meta charset="utf-8">
 
-    <!--    INCLUSIONS NÉCESSAIRES -->
-
-    <!-- (Bootstrap) Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- (Bootstrap)Latest compiled JavaScript -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Nécessaire pour l'acces a l'API Google.... apparement...-->
@@ -62,7 +60,7 @@
         <div id="carteStations" class="tab-pane fade in active">
 
 
-            <div id="rangee" class="row">
+            <div id="rangee" class="row contenu-onglet">
 
                 <!-- champ de saisie pour la recherche-->
                 <div class="col-sm-4" id="recherche">
@@ -78,18 +76,15 @@
             </div>
 
             <!-- implementation de l'api google-->
-            <div id="map">
-
-            </div>
-
-
+            <div id="map"></div>
 
         </div>
 
 
         <!--    Code pour l'onglet  "Liste des stations "   -->
-        <div class="tab-pane fade" id="listeStations">
-            <table id="table_id" class="display">
+        <div id="listeStations" class="contenu-onglet tab-pane fade">
+            <h2>État de toutes les stations de vélos</h2>
+            <table id="tableau_liste" class="display">
                 <thead>
                     <tr>
                         <th>Column 1</th>

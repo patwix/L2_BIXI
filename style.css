@@ -1,7 +1,6 @@
 /*
-code css pour la barre d'accueil
+barre d'accueil
 */
-
 .barreAccueil {
     background-color: #2980B9;
     padding-left: 100px;
@@ -40,12 +39,15 @@ code css pour la barre d'accueil
     background-color: #01579B;
 }
 
+/*
+onglets
+*/
 .container-fluid {
     padding: 20px;
 }
 
-.container-fluid li {
-    background-color: #F1F1F1;
+.container-fluid a {
+    background-color: #eee;
 }
 
 .nav-tabs a {
@@ -57,15 +59,33 @@ code css pour la barre d'accueil
 .nav-tabs>li.active>a:focus {
     color: #fff !important;
     background-color: #27AE60 !important;
+    border-color: #27AE60 !important;
 }
 
+.contenu-onglet {
+    padding-left: 20px;
+}
+
+/*
+barre de recherche
+*/
 #recherche {
-    border-right: 1px solid #F1F1F1;
+    border-right: 1px solid #ddd;
     height: 180px;
-    margin-left: 20px;
+    margin-top: 20px;
 }
 
+/*
+carte des stations
+*/
 #map {
     margin: 5px;
     height: 275px;
+}
+
+/*
+liste des stations
+*/
+#listeStations{
+    color: #555;
 }
