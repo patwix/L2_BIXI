@@ -10,15 +10,26 @@ function initMap() {
 }
 
 
-// Initialisation du tableau de la liste des stations
+// Chargement des informations de la base de donnees de bixi
 
 
 let listeStations = {};
 let nomsStations = {};
+let tableauStations = {};
 
 $(document).ready(function () {
     chargerStations();
-    $("#tableau_liste").DataTable();
+    $("#tableau_liste").DataTable({
+        data: tableauStations,
+        columns: [
+            { title: "ID" },
+            { title: "Nom Station" },
+            { title: "Vélos disponibles" },
+            { title: "Bornes disponibles" },
+            { title: "État bloqué" },
+            { title: "État suspendu" }
+        ]
+    });
 } );
 
 function parseStation(station) {
@@ -45,6 +56,7 @@ function chargerStations(){
             let temp = parseStation(val);
             listeStations[temp.nom] = temp;
             nomsStations[temp.id] = temp.nom;
+            tableauStations[temp.id] = [temp.id, temp.nom, temp.velos-dispo, temp.bornes-dispo, temp.bloquee, temp.suspendue];
         });
     });
 }
