@@ -3,7 +3,6 @@
 
 <head>
 
-    <script type="text/javascript" src="main.js"></script>
     <!--    pour l'utilisation des icones font awesome-->
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
 
@@ -14,6 +13,7 @@
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,6 +25,7 @@
     <!-- DataTables (pour la liste des stations) -->
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 
     <!--    FIN DES INCLUSIONS      -->
 
@@ -65,7 +66,7 @@
                 <!-- champ de saisie pour la recherche-->
                 <div class="col-sm-4" id="recherche">
                     <form>
-                        <input type="text" name="firstname">
+                        <input id="nom" type="text" name="station">
                     </form>
                 </div>
 
@@ -93,8 +94,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>Row 2 Data 1</td>
