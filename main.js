@@ -61,13 +61,11 @@ function chargerStations(){
             nomsStations[i] = temp.nom;
             tableauStations[i] = [(temp.id).toString(), temp.nom, (temp.velosDispo).toString(), (temp.bornesDispo).toString(), (temp.bloquee).toString(), (temp.suspendue).toString()];
         });
-        initTableau();        
+        initTableau();  
+        $(function() {
+            $( "#nom" ).autocomplete({
+                source: nomsStations
+            });
+        });              
     });
 }
-
-$(function() {
-    $( "#nom" ).autocomplete({
-        source: nomsStations
-    });
-});
-
