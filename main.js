@@ -1,7 +1,6 @@
 // Initialisation de la carte google maps
 var map;
 
-
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 45.522, lng: -73.775 },
@@ -14,12 +13,16 @@ function initMap() {
 
 
 let listeStations = {};
-let nomsStations = {};
-let tableauStations = {};
+let nomsStations = [];
+var tableauStations = [];
 
 $(document).ready(function () {
+    initMap();
     chargerStations();
-    $("#tableau_liste").DataTable({
+} );
+
+function initTableau(){
+    $('#tableauListe').DataTable({
         data: tableauStations,
         columns: [
             { title: "ID" },
@@ -30,7 +33,7 @@ $(document).ready(function () {
             { title: "État suspendu" }
         ]
     });
-} );
+}
 
 function parseStation(station) {
     let newStation = {
@@ -41,10 +44,10 @@ function parseStation(station) {
         'hors-service': station.m,
         'latitude': station.la,
         'longitude': station.lo,
-        'bornes-dispo': station.da,
-        'bornes-indispo': station.dx,
-        'velos-dispo': station.ba,
-        'velos-indispo': station.bx,
+        'bornesDispo': station.da,
+        'bornesIndispo': station.dx,
+        'velosDispo': station.ba,
+        'velosIndispo': station.bx,
     }
     return newStation;
 }
@@ -55,9 +58,10 @@ function chargerStations(){
         $.map( reponse.stations, function( val, i ) {
             let temp = parseStation(val);
             listeStations[temp.nom] = temp;
-            nomsStations[temp.id] = temp.nom;
-            tableauStations[temp.id] = [temp.id, temp.nom, temp.velos-dispo, temp.bornes-dispo, temp.bloquee, temp.suspendue];
+            nomsStations[i] = temp.nom;
+            tableauStations[i] = [(temp.id).toString(), temp.nom, (temp.velosDispo).toString(), (temp.bornesDispo).toString(), (temp.bloquee).toString(), (temp.suspendue).toString()];
         });
+        initTableau();        
     });
 }
 
