@@ -14,6 +14,7 @@
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -66,13 +67,52 @@
 
                 <!-- champ de saisie pour la recherche-->
                 <div class="col-sm-4" id="recherche">
-                    <form>
+                    <div id="autocomplete"  class="ui-widget">
                         <input id="nom" type="text" name="station">
-                    </form>
+                    </div>
+                    <h4>Localisation:</h4>
                 </div>
 
                 <!--  tableau d'état des stations-->
                 <div id="tabEtat" class="col-sm-8">
+                    <h4>État de la station de vélos</h4>
+                    <table class="col-sm-12">
+                        <tr>
+                            <td>ID Station</td>
+                            <td>test
+                            </td>
+                            <td class="bordure">Vélos disponibles</td>
+                            <td>
+                                <div>
+                                    <p class="pill">6173</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bloquee</td>
+                            <td>test
+                            </td>
+                            <td class="bordure">Bornes Disponibles</td>
+                            <td>test
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Suspendue</td>
+                            <td>test
+                            </td>
+                            <td class="bordure">Vélos indisponibles</td>
+                            <td>test
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hors service</td>
+                            <td>test
+                            </td>
+                            <td class="bordure">Bornes indisponibles</td>
+                            <td>test
+                            </td>
+                        </tr>
+                    </table>
                 </div>
 
             </div>

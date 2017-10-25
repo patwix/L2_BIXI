@@ -75,6 +75,57 @@ barre de recherche
     margin-top: 20px;
 }
 
+.ui-autocomplete {
+    max-height: 160px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#recherche h4 {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+}
+
+h4 {
+    color: #3494C7 !important;
+}
+
+/*
+ * Tableau d'etat
+ */
+
+#tabEtat {
+    padding: 0px 40px 40px;
+}
+
+#tabEtat table {
+    border-top: 20px solid #3498D8;
+}
+
+#tabEtat td {
+    border-top: 1px solid #f4f4f4;
+    border-collapse: collapse;
+    padding: 10px !important;
+    width: 25%;
+}
+
+.bordure {
+    border-left: 1px solid #f4f4f4;
+}
+
+#tabEtat tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.pill {
+    background-color: #8a8a8a;
+    color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 25px;
+    text-align: center;
+}
+
 /*
 carte des stations
 */

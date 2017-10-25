@@ -8,13 +8,21 @@ function initMap() {
     });
 }
 
+function placerMarqueur(coordonnees, nomStation){
+    var marker = new google.maps.Marker({
+        position: coordonnees,
+        map: map,
+        title: nomStation,
+    });    
+}
+
 
 // Chargement des informations de la base de donnees de bixi
 
 
 let listeStations = {};
-let nomsStations = [];
-var tableauStations = [];
+let stationsAutocomplete = [];
+var stationsTableau = [];
 
 $(document).ready(function () {
     initMap();
@@ -23,7 +31,7 @@ $(document).ready(function () {
 
 function initTableau(){
     $('#tableauListe').DataTable({
-        data: tableauStations,
+        data: stationsTableau,
         columns: [
             { title: "ID" },
             { title: "Nom Station" },
@@ -58,13 +66,18 @@ function chargerStations(){
         $.map( reponse.stations, function( val, i ) {
             let temp = parseStation(val);
             listeStations[temp.nom] = temp;
-            nomsStations[i] = temp.nom;
-            tableauStations[i] = [(temp.id).toString(), temp.nom, (temp.velosDispo).toString(), (temp.bornesDispo).toString(), (temp.bloquee).toString(), (temp.suspendue).toString()];
+            stationsAutocomplete[i] = temp.nom;
+            stationsTableau[i] = [(temp.id).toString(), temp.nom, (temp.velosDispo).toString(), (temp.bornesDispo).toString(), (temp.bloquee).toString(), (temp.suspendue).toString()];
         });
         initTableau();  
         $(function() {
             $( "#nom" ).autocomplete({
-                source: nomsStations
+                source: stationsAutocomplete,
+                select: function(event, ui){
+                    var nomStation = ui.item.label
+                    var coordonnees = {lng: listeStations[nomStation].longitude, lat: listeStations[nomStation].latitude}
+                    placerMarqueur(coordonnees, nomStation);
+                },
             });
         });              
     });
