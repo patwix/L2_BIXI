@@ -31,6 +31,12 @@ $(document).ready(function () {
 
 function initTableau(){
     $('#tableauListe').DataTable({
+        
+        /* ca marche pas criss */
+        /* "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/French.json"
+        }*/
+        
         data: stationsTableau,
         columns: [
             { title: "ID" },
@@ -49,7 +55,7 @@ function parseStation(station) {
         'nom': station.s,
         'bloquee': station.b,
         'suspendue': station.su,
-        'hors-service': station.m,
+        'horsService': station.m,
         'latitude': station.la,
         'longitude': station.lo,
         'bornesDispo': station.da,
@@ -77,6 +83,29 @@ function chargerStations(){
                     var nomStation = ui.item.label
                     var coordonnees = {lng: listeStations[nomStation].longitude, lat: listeStations[nomStation].latitude}
                     placerMarqueur(coordonnees, nomStation);
+                    $( "#IDstation" ).text(listeStations[nomStation].id);
+                    
+                    //Vérifie si la variable contient true ou false afin dafficher la bonne affaire tsé...
+                    if (listeStations[nomStation].bloquee)
+                        $( "#bloquee" ).text('Oui');
+                    else
+                        $( "#bloquee" ).text('Non');
+                    $( "#bornesDis" ).text(listeStations[nomStation].bornesDispo);
+                    
+                    if (listeStations[nomStation].suspendue)
+                        $( "#suspendu" ).text('Oui');
+                    else
+                        $( "#suspendu" ).text('Non');
+                    $( "#HS" ).text(listeStations[nomStation].horsService);
+                    if (listeStations[nomStation].horsService)
+                        $( "#HS" ).text('Oui');
+                    else
+                        $( "#HS" ).text('Non');
+                    
+                    
+                    $( "#bornesND" ).text(listeStations[nomStation].bornesIndispo);
+                    $( "#veloDispo" ).text(listeStations[nomStation].velosDispo);
+                    $( "#veloND" ).text(listeStations[nomStation].velosIndispo);
                 },
             });
         });              

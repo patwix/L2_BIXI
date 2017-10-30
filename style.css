@@ -120,10 +120,12 @@ h4 {
 .pill {
     background-color: #8a8a8a;
     color: white;
-    width: 15px;
-    height: 15px;
+    float: left;
+    min-width: 20px;
+    height: 21px;
     border-radius: 25px;
     text-align: center;
+    padding: 3px;
 }
 
 /*
