@@ -3,13 +3,13 @@
 
 <head>
 
-    <!--    pour l'utilisation des icones font awesome-->
-    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+
+    <!-- Pour l'utilisation des icones font awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Notre fichier style CSS-->
     <link rel="stylesheet" type="text/css" href="style.css">
-
-    <meta charset="utf-8">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Nécessaire pour l'acces a l'API Google.... apparement...-->
+    <!-- API Google -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjonwWBWoE1W6L8sU7KPl7zkRLSaPNC2o&callback=initMap" async defer></script>
 
     <!-- DataTables (pour la liste des stations) -->
@@ -72,6 +72,7 @@
                         <input id="nom" type="text" name="station">
                     </div>
                     <h4>Localisation:</h4>
+                    <h3 id="selection">Aucune Sélection</h3>
                 </div>
 
                 <!--  tableau d'état des stations-->

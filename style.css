@@ -125,7 +125,19 @@ h4 {
     height: 21px;
     border-radius: 25px;
     text-align: center;
-    padding: 3px;
+    padding: 0px 3px 5px;
+}
+
+/*.fondGris {
+    background-color: #8a8a8a;
+}*/
+
+.fondRouge{
+    background-color: #E74C3C;
+}
+
+.fondVert{
+    background-color: #27AE60;
 }
 
 /*
